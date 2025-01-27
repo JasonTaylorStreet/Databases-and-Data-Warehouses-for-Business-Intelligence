@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="42" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Task3Output.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Master Patient ID" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient_Admission_DateTime_out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="SequenceNumber" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb" type="Int32" />
+            <Field name="ReadmitDelta" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb" type="Int64" />
+            <Field name="ShortReadmit" size="1073741823" source="Formula: IF IsNull([ReadmitDelta]) THEN&#xA;&quot;N/A&quot;&#xA;ELSEIF [ReadmitDelta]&lt;=30 THEN&#xA;&quot;Less than or equal to 30 days&quot;&#xA;ELSE&#xA;&quot;More than 30 days&quot;&#xA;ENDIF" type="V_WString" />
+            <Field name=" Patient_discharge_dateTime_Out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="Patient InICU Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Number" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Street" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Full" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient City" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Zip Code" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient County" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient State" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Country" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Gender" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient LACE Score" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient_DOB_DateTime_Out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="Patient Marital Status" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Primary Language" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Is Citizen Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Is Deceased Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient PCP Type" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Ethnicity" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Number" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Street" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Full" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital City" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Zip Code" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital County" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital State" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Country" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Department Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Specialty Description" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Primary ICD Diagnosis Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Primary Diagnosis Long Description" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Admit ICD Diangosis Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Admit Diagnosis Long Description" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Primary ICD Procedure Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Primary Procedure Long Description" size="255" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\CMS_Procedure_Descriptioncodes.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Primary Payor ID" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+            <Field name="Total Account Balance $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Adjustment $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Charge $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Payment $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="HRRP Condition" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+            <Field name="Patient Age" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int32" />
+            <Field name="LOS" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="234" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Hospital Name" action="GroupBy" rename="Hospital Name" />
+            <SummarizeField field="Department Name" action="GroupBy" rename="Department Name" />
+            <SummarizeField field="SequenceNumber" action="Count" rename="NumberAdmissions" />
+            <SummarizeField field="ReadmitDelta" action="CountNonNull" rename="ALL Readmissions" />
+            <SummarizeField field="Less31ReadmissionDays" action="CountNonNull" rename="R30 Readmissions" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="138" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [ReadmitDelta] &lt;=30 THEN&#xA;[ReadmitDelta]&#xA;ELSE&#xA;Null()&#xA;ENDIF" field="Less31ReadmissionDays" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Less31ReadmissionDays = IF [ReadmitDelta] &lt;=30 THEN
+[ReadmitDelta]
+ELSE
+Null()
+E...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="330" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[ALL Readmissions] / [NumberAdmissions]" field="Readmission Rate" size="4" type="Float" />
+            <FormulaField expression="[R30 Readmissions] / [NumberAdmissions]" field="R30 Rate" size="4" type="Float" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Readmission Rate = [ALL Readmissions] / [NumberAdmissions]
+R30 Rate = [R30 Readm...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Task5Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7c2d58b5-05ff-40e7-81b0-94db67509ab8" />
+      <Telemetry>
+        <PreviousWorkflowId value="d265079a-69ad-4267-8ffa-f27d2e194e2c" />
+        <OriginWorkflowId value="d265079a-69ad-4267-8ffa-f27d2e194e2c" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

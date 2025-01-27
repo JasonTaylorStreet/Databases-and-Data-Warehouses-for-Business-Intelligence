@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Task3Output.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Master Patient ID" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient_Admission_DateTime_out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="SequenceNumber" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb" type="Int32" />
+            <Field name="ReadmitDelta" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\Workflows\Task3Output.yxdb" type="Int64" />
+            <Field name="ShortReadmit" size="1073741823" source="Formula: IF IsNull([ReadmitDelta]) THEN&#xA;&quot;N/A&quot;&#xA;ELSEIF [ReadmitDelta]&lt;=30 THEN&#xA;&quot;Less than or equal to 30 days&quot;&#xA;ELSE&#xA;&quot;More than 30 days&quot;&#xA;ENDIF" type="V_WString" />
+            <Field name=" Patient_discharge_dateTime_Out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="Patient InICU Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Number" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Street" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Address Full" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient City" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Zip Code" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient County" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient State" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Country" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Gender" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient LACE Score" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient_DOB_DateTime_Out" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="DateTime" />
+            <Field name="Patient Marital Status" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Primary Language" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Is Citizen Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Is Deceased Flag" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient PCP Type" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Patient Ethnicity" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Number" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Street" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Address Full" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital City" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Zip Code" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital County" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital State" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Hospital Country" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Department Name" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Specialty Description" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_String" />
+            <Field name="Primary ICD Diagnosis Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Primary Diagnosis Long Description" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Admit ICD Diangosis Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Admit Diagnosis Long Description" size="255" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_String" />
+            <Field name="Primary ICD Procedure Code" size="254" source="Formula: Trim([_CurrentField_],&quot; 	&quot;+CharFromInt(10)+CharFromInt(13)+CharFromInt(160))" type="V_WString" />
+            <Field name="Primary Procedure Long Description" size="255" source="File: C:\Users\jasst\BUAD5772BB_class_files\Assignments\M7\CMS_Procedure_Descriptioncodes.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Primary Payor ID" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+            <Field name="Total Account Balance $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Adjustment $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Charge $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="Total Account Payment $" scale="2" size="19" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="FixedDecimal" />
+            <Field name="HRRP Condition" size="254" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="V_WString" />
+            <Field name="Patient Age" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int32" />
+            <Field name="LOS" source="Formula: IF &#xA;REGEX_Match([_CurrentFieldName_], '.*(?:_Indicator)$', 0) &amp;&amp; IsNull([_CurrentField_]) THEN &#xA;  0 &#xA;ELSE &#xA;  [_CurrentField_] &#xA;ENDIF" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="126" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Master Patient ID" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="606" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="LastName" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>LastName - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Master Patient ID" selected="True" />
+            <SelectField field="Patient Name" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Patient Gender" selected="True" />
+            <SelectField field="Patient_DOB_DateTime_Out" selected="True" />
+            <SelectField field="Patient Age" selected="True" />
+            <SelectField field="Tile_Num" selected="False" />
+            <SelectField field="Tile_SequenceNum" selected="False" />
+            <SelectField field="AgeBin" selected="True" />
+            <SelectField field="Patient Primary Language" selected="True" />
+            <SelectField field="Patient Marital Status" selected="True" />
+            <SelectField field="Patient Ethnicity" selected="True" />
+            <SelectField field="Patient LACE Score" selected="True" />
+            <SelectField field="Patient PCP Type" selected="True" />
+            <SelectField field="Patient Is Citizen Flag" selected="True" />
+            <SelectField field="Patient Is Deceased Flag" selected="True" />
+            <SelectField field="Patient Address Full" selected="True" />
+            <SelectField field="Patient Address Number" selected="True" />
+            <SelectField field="Patient Address Street" selected="True" />
+            <SelectField field="Patient City" selected="True" />
+            <SelectField field="Patient County" selected="True" />
+            <SelectField field="Patient State" selected="True" />
+            <SelectField field="Patient Zip Code" selected="True" />
+            <SelectField field="Patient Country" selected="True" />
+            <SelectField field="Hospital Address Street" selected="False" />
+            <SelectField field="Hospital Address Full" selected="False" />
+            <SelectField field="Hospital City" selected="False" />
+            <SelectField field="Hospital Zip Code" selected="False" />
+            <SelectField field="Hospital County" selected="False" />
+            <SelectField field="Hospital State" selected="False" />
+            <SelectField field="Hospital Country" selected="False" />
+            <SelectField field="Department Name" selected="False" />
+            <SelectField field="Specialty Description" selected="False" />
+            <SelectField field="Primary ICD Diagnosis Code" selected="False" />
+            <SelectField field="Hospital Address Number" selected="False" />
+            <SelectField field="Primary Diagnosis Long Description" selected="False" />
+            <SelectField field="Admit Diagnosis Long Description" selected="False" />
+            <SelectField field="Primary ICD Procedure Code" selected="False" />
+            <SelectField field="Primary Procedure Long Description" selected="False" />
+            <SelectField field="Primary Payor ID" selected="False" />
+            <SelectField field="Total Account Balance $" selected="False" />
+            <SelectField field="Total Account Adjustment $" selected="False" />
+            <SelectField field="Total Account Charge $" selected="False" />
+            <SelectField field="Total Account Payment $" selected="False" />
+            <SelectField field="HRRP Condition" selected="False" />
+            <SelectField field="Admit ICD Diangosis Code" selected="False" />
+            <SelectField field="LOS" selected="False" />
+            <SelectField field="Hospital Name" selected="False" />
+            <SelectField field="Patient_Admission_DateTime_out" selected="False" />
+            <SelectField field="SequenceNumber" selected="False" />
+            <SelectField field="ReadmitDelta" selected="False" />
+            <SelectField field="ShortReadmit" selected="False" />
+            <SelectField field=" Patient_discharge_dateTime_Out" selected="False" />
+            <SelectField field="Patient InICU Flag" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="GetLeft([Patient Name], ' ')" field="FirstName" size="1073741823" type="V_WString" />
+            <FormulaField expression="GetRight([Patient Name], ' ')" field="LastName" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FirstName = GetLeft([Patient Name], ' ')
+LastName = GetRight([Patient Name], ' '...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Tile.Tile">
+        <Position x="318" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Method>Manual</Method>
+          <Manual>
+            <Field>Patient Age</Field>
+            <Cutoffs><![CDATA[19
+39
+59
+79
+99
+]]></Cutoffs>
+          </Manual>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTile" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Tile_Num] = 1 THEN&#xA;&quot;0-19&quot;&#xA;ELSEIF [Tile_Num] = 2 THEN&#xA;&quot;20-39&quot;&#xA;ELSEIF [Tile_Num] = 3 THEN&#xA;&quot;40-59&quot;&#xA;ELSEIF [Tile_Num] = 4 THEN&#xA;&quot;60-79&quot;&#xA;ELSEIF [Tile_Num] = 5 THEN&#xA;&quot;80-99&quot;&#xA;ELSE&#xA;&quot;100+&quot;&#xA;ENDIF&#xA;" field="AgeBin" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AgeBin = IF [Tile_Num] = 1 THEN
+"0-19"
+ELSEIF [Tile_Num] = 2 THEN
+"20-39"
+ELSEIF...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="138" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Hospital Name" />
+            <Field field="Department Name" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="366" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Hospital Name" order="Ascending" />
+            <Field field="Department Name" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Hospital Name - Ascending
+Department Name - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Master Patient ID" selected="False" />
+            <SelectField field="Patient_Admission_DateTime_out" selected="False" />
+            <SelectField field="SequenceNumber" selected="False" />
+            <SelectField field="ReadmitDelta" selected="False" />
+            <SelectField field="ShortReadmit" selected="False" />
+            <SelectField field=" Patient_discharge_dateTime_Out" selected="False" />
+            <SelectField field="Patient InICU Flag" selected="False" />
+            <SelectField field="Patient Address Number" selected="False" />
+            <SelectField field="Patient Address Street" selected="False" />
+            <SelectField field="Patient Address Full" selected="False" />
+            <SelectField field="Patient City" selected="False" />
+            <SelectField field="Patient Zip Code" selected="False" />
+            <SelectField field="Patient County" selected="False" />
+            <SelectField field="Patient State" selected="False" />
+            <SelectField field="Patient Country" selected="False" />
+            <SelectField field="Patient Name" selected="False" />
+            <SelectField field="Patient Gender" selected="False" />
+            <SelectField field="Patient LACE Score" selected="False" />
+            <SelectField field="Patient_DOB_DateTime_Out" selected="False" />
+            <SelectField field="Patient Marital Status" selected="False" />
+            <SelectField field="Patient Primary Language" selected="False" />
+            <SelectField field="Patient Is Citizen Flag" selected="False" />
+            <SelectField field="Patient Is Deceased Flag" selected="False" />
+            <SelectField field="Patient PCP Type" selected="False" />
+            <SelectField field="Patient Ethnicity" selected="False" />
+            <SelectField field="Hospital Name" selected="True" />
+            <SelectField field="Department Name" selected="True" />
+            <SelectField field="Hospital Address Full" selected="True" />
+            <SelectField field="Hospital Address Number" selected="True" />
+            <SelectField field="Hospital Address Street" selected="True" />
+            <SelectField field="Hospital City" selected="True" />
+            <SelectField field="Hospital Zip Code" selected="True" />
+            <SelectField field="Hospital County" selected="True" />
+            <SelectField field="Hospital State" selected="True" />
+            <SelectField field="Hospital Country" selected="True" />
+            <SelectField field="Specialty Description" selected="False" />
+            <SelectField field="Primary ICD Diagnosis Code" selected="False" />
+            <SelectField field="Primary Diagnosis Long Description" selected="False" />
+            <SelectField field="Admit ICD Diangosis Code" selected="False" />
+            <SelectField field="Admit Diagnosis Long Description" selected="False" />
+            <SelectField field="Primary ICD Procedure Code" selected="False" />
+            <SelectField field="Primary Procedure Long Description" selected="False" />
+            <SelectField field="Primary Payor ID" selected="False" />
+            <SelectField field="Total Account Balance $" selected="False" />
+            <SelectField field="Total Account Adjustment $" selected="False" />
+            <SelectField field="Total Account Charge $" selected="False" />
+            <SelectField field="Total Account Payment $" selected="False" />
+            <SelectField field="HRRP Condition" selected="False" />
+            <SelectField field="Patient Age" selected="False" />
+            <SelectField field="LOS" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Unique" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Unique" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Task4Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="98c4442a-3ceb-42d5-bc07-ae509e840da0" />
+      <Telemetry>
+        <PreviousWorkflowId value="6601e05d-67b8-4988-ba37-46a815e7dc5f" />
+        <OriginWorkflowId value="6601e05d-67b8-4988-ba37-46a815e7dc5f" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

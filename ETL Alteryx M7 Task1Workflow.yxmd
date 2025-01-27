@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\EHRData.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EHRData.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="738" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">.\Task1Output.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Task1Output.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="150" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Patient Admission Datetime</InputFieldName>
+          <Language>English</Language>
+          <Format>MM/dd/yyyy hh:mm</Format>
+          <OutputFieldName>Patient_Admission_DateTime_out</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Patient Admission Datetime From:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="258" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Patient Discharge Datetime</InputFieldName>
+          <Language>English</Language>
+          <Format>MM/dd/yyyy hh:mm</Format>
+          <OutputFieldName><![CDATA[ Patient_discharge_dateTime_Out]]></OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Patient Discharge Datetime From:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="354" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="False" />
+          <InputFieldName>Patient DOB</InputFieldName>
+          <Language>English</Language>
+          <Format>MM/dd/yyyy hh:mm</Format>
+          <OutputFieldName>Patient_DOB_DateTime_Out</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Patient DOB From:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="450" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Total Account Balance $], ',', '')" field="Total Account Balance $" size="254" type="V_WString" />
+            <FormulaField expression="Replace([Total Account Adjustment $], ',', '')" field="Total Account Adjustment $" size="254" type="V_WString" />
+            <FormulaField expression="Replace([Total Account Charge $], ',', '')" field="Total Account Charge $" size="254" type="V_WString" />
+            <FormulaField expression="Replace([Total Account Payment $], ',', '')" field="Total Account Payment $" size="254" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Total Account Balance $ = Replace([Total Account Balance $], ',', '')
+Total Acco...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="594" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Master Patient ID" selected="True" />
+            <SelectField field="Patient Admission Datetime" selected="False" />
+            <SelectField field="Patient Discharge Datetime" selected="False" />
+            <SelectField field="Patient_Admission_DateTime_out" selected="True" />
+            <SelectField field=" Patient_discharge_dateTime_Out" selected="True" />
+            <SelectField field="Patient InICU Flag" selected="True" />
+            <SelectField field="Patient Address Number" selected="True" />
+            <SelectField field="Patient Address Street" selected="True" />
+            <SelectField field="Patient Address Full" selected="True" />
+            <SelectField field="Patient City" selected="True" />
+            <SelectField field="Patient Zip Code" selected="True" />
+            <SelectField field="Patient County" selected="True" />
+            <SelectField field="Patient State" selected="True" />
+            <SelectField field="Patient Country" selected="True" />
+            <SelectField field="Patient Name" selected="True" />
+            <SelectField field="Patient Gender" selected="True" />
+            <SelectField field="Patient LACE Score" selected="True" />
+            <SelectField field="Patient DOB" selected="False" />
+            <SelectField field="Patient_DOB_DateTime_Out" selected="True" />
+            <SelectField field="Patient Marital Status" selected="True" />
+            <SelectField field="Patient Primary Language" selected="True" />
+            <SelectField field="Patient Is Citizen Flag" selected="True" />
+            <SelectField field="Patient Is Deceased Flag" selected="True" />
+            <SelectField field="Patient PCP Type" selected="True" />
+            <SelectField field="Patient Ethnicity" selected="True" />
+            <SelectField field="Hospital Name" selected="True" />
+            <SelectField field="Hospital Address Number" selected="True" />
+            <SelectField field="Hospital Address Street" selected="True" />
+            <SelectField field="Hospital Address Full" selected="True" />
+            <SelectField field="Hospital City" selected="True" />
+            <SelectField field="Hospital Zip Code" selected="True" />
+            <SelectField field="Hospital County" selected="True" />
+            <SelectField field="Hospital State" selected="True" />
+            <SelectField field="Hospital Country" selected="True" />
+            <SelectField field="Department Name" selected="True" />
+            <SelectField field="Specialty Description" selected="True" />
+            <SelectField field="Primary ICD Diagnosis Code" selected="True" />
+            <SelectField field="Admit ICD Diangosis Code" selected="True" />
+            <SelectField field="Primary ICD Procedure Code" selected="True" />
+            <SelectField field="Primary Payor ID" selected="True" />
+            <SelectField field="Total Account Balance $" selected="True" type="FixedDecimal" size="19.2" />
+            <SelectField field="Total Account Adjustment $" selected="True" type="FixedDecimal" size="19.2" />
+            <SelectField field="Total Account Charge $" selected="True" type="FixedDecimal" size="19.2" />
+            <SelectField field="Total Account Payment $" selected="True" type="FixedDecimal" size="19.2" />
+            <SelectField field="HRRP Condition" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Task1Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ca2199d9-178e-4369-b1a8-bcc15eb4ccf8" />
+      <Telemetry>
+        <PreviousWorkflowId value="0a1b968d-b8a6-4c99-990c-4a5ad59afec1" />
+        <OriginWorkflowId value="0a1b968d-b8a6-4c99-990c-4a5ad59afec1" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
